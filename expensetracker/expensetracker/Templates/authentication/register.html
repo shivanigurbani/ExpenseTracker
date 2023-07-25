@@ -1,0 +1,62 @@
+{% extends 'partials/base_auth.html'%}
+{% load static %}
+{% block content %}
+<link href="{% static 'css/register3.css' %}" rel="stylesheet">
+<div class="form">
+
+    <div class="register">
+
+        <div class="img">
+
+        </div>
+
+
+        <div class="card ">
+            <div class="card-body">
+                <div class="card-title">
+                    <h4>Register for a free account</h4>
+
+                    <form action="{% url 'register' %}" method="post">
+                       
+                        {% csrf_token %}
+                        {% include 'partials/messages.html' %}
+                        <div class="form-group p-2">
+                            <input type="text" name="username" placeholder="username"
+                                class="form-control form-control-sm input" value="{{fielValues.username}}" id="usernameField" />
+                        </div>
+                        <div class="form-group p-2">
+                            <input type="email" name="email" placeholder="Email"
+                                class="form-control form-control-sm input" value="{{fielValues.email}}"  id="emailField" />
+                        </div>
+                        <div class="form-group p-2">
+                            <input type="password" name="password" placeholder="Password"
+                                class="form-control form-control-sm input"value="{{fielValues.password}}" id="passwordField" />
+                        </div>
+                        <!-- <div class="form-group p-2">
+                            <input type="password" name="password" placeholder=" Confirm Password"
+                                class="form-control form-control-sm input" id="passwordField" />
+                        </div> -->
+                        <div class="form-group p-2">
+                            <input type="checkbox" name="" id="">
+                            <span>I agree to the <span style="color:rgba(0, 0, 255, 0.644);font-weight:bold;"> Terms and
+                                    Conditions </span> </span>
+                        </div>
+                        <div style="text-align: center; position:relative;">
+                            <input type="submit" value="Register" class="btn btn-block btn-primary submit-btn"
+                                style=" width: 120px;padding: 10px; margin-top: 20px; margin-left:-320px" />
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="{% static 'js/register.js' %}">
+
+    </script>
+
+    {% endblock %}

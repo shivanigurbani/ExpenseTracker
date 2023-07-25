@@ -1,0 +1,15 @@
+{% load static %}
+{% if messages %}  
+<!-- : This is a template tag that checks if there are any messages stored in the messages variable. -->
+<div class="messages">
+    {% for message in messages %}
+    <div id="message-{{ loop.index }}" style="width:75%; height:60px;"
+    {% if message.tags %} class="alert alert-sm alert-{{ message.tags }} "
+    {% endif %}>
+    {{ message }}
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<script src="{% static 'js/messages.js' %}"></script>
