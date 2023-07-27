@@ -19,25 +19,21 @@
       </nav>
     </div>
 
-    <div class="col-md-2">
-      <a href="{% url 'addincome'%}" class="btn btn-primary">Add Income</a>
+    <div class="add" style="display: flex; margin-bottom:20px;   align-items:center;"><div class="col-md-9 " style="margin-left: 14px;">
+      <a href="{% url 'addincome' %}" class="btn btn-primary">Add Income</a>
     </div>
-  </div>
-
-   <div class="container">
+    <div class="form-group">
+    <input type="text" class="form-control" id="searchField"placeholder="Search">   </div>
+    </div></div>
+    </div>
+    <div class="container" style="margin-left: 10px;">
     {% include 'partials/messages.html' %}
 
     {% if income.count %}
 
     <div class="row">
-      <div class="col-md-8"></div>
-      <div class="col-md-4">
+     
 
-        <div class="form-group">
-          <input type="text" class="form-control" id="searchField" placeholder="Search">
-        </div>
-      </div>
-     </div>
 <div class="app-table">
 
   <table class="table table-stripped table-hover">

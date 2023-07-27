@@ -1,0 +1,60 @@
+.register{
+    display: flex;
+    width: 60%;
+    flex-direction: row-reverse;
+    height: 75%;
+   background-color: white;
+   overflow: hidden;
+    border-radius:25px;
+      
+}
+.img{
+    flex: 1;
+    background:  linear-gradient(rgba(9, 121, 112, 0.103), rgba(196, 80, 235, 0.194)),url("https://img.freepik.com/premium-vector/online-registration-illustration-design-concept-websites-landing-pages-other_108061-938.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+   justify-content:center ;
+   align-items: baseline;
+   flex-direction: column;
+
+    
+}
+.welcome{
+color: white;
+margin-top: 200px;
+margin-left: 100px;
+font-weight: bold;
+
+font-family:'Times New Roman', Times, serif;
+}
+
+.card{
+    flex: 1;
+}
+
+.form{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid black;
+    background: rgb(14, 115, 107);
+    background: linear-gradient(90deg, rgba(9, 121, 112, 0.655) 5%, rgba(196, 80, 235, 0.5) 100%);
+     
+    /* background-image: linear-gradient(to right, #2c3e50, #4ca1af); */
+}
+.card-body{
+    width: 500px;
+    
+    /* background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% ); */
+   
+    padding: 30px 10px ;
+   
+}
+.input{
+    width: 300px;
+}
